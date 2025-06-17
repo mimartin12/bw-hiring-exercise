@@ -15,7 +15,7 @@ def add_message(response: dict, msg: str) -> dict:
 
 @app.get("/")
 def root():
-    return add_message({}, "Hi from Bitwarden DevOps!")
+    return add_message({}, "Hi from Bitwarden!")
 
 
 @app.get("/custom")

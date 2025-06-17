@@ -9,7 +9,7 @@
 -   🐛 Bug fix
 -   🚀 New feature development
 -   🧹 Tech debt (refactoring, code cleanup, dependency upgrades, etc.)
--   🤖 Build/deploy pipeline (DevOps)
+-   🤖 Build/deploy pipeline (BRE)
 -   🎂 Other
 
 ## 📔 Objective
@@ -34,7 +34,7 @@
 -   Written new unit and / or integration tests where applicable
 -   Used internationalization (i18n) for all UI strings
 -   CI builds passed
--   Communicated to DevOps any deployment requirements
+-   Communicated to BRE any deployment requirements
 -   Updated any necessary documentation or informed the documentation team
 
 ## 🦮 Reviewer guidelines

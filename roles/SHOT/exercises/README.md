@@ -1,6 +1,6 @@
 # Exercises 
 
-To be successful in the "DevOps Engineer, Self-host" role, there are a few necessary skills. This role will be taking on
+To be successful in the "Self-host Orchestration & Tooling Engineer" role, there are a few necessary skills. This role will be taking on
 responsibility of a few key areas in an fairly autonomous way. The following exercises will demonstrate those needed
 skills. Each one of these skills will be used on a weekly basis, if not a daily one.
 
@@ -26,7 +26,7 @@ important for the success of this role. Use the provided application to build a 
 ```
 docker run -e BW_MESSAGE='hey' -p 8080:8080 $IMAGE_NAME
 
-curl http://localhost:8080/         ## Expected result: {"message": "Hi from Bitwarden DevOps!"}
+curl http://localhost:8080/         ## Expected result: {"message": "Hi from Bitwarden!"}
 curl http://localhost:8080/custom   ## Expected result: {"message": "hey"}
 curl http://localhost:8080/version  ## Expected result: {"version": "0.0.0"}
 ```
@@ -41,7 +41,7 @@ docker-compose file that has both the image created with the above Dockerfile an
 ### Acceptance Criteria
 
 - docker-compose file in the root of the repo
-- service named `app` that uses an image named `bw-devops-exercise` built from the Dockerfile in exercise 1.
+- service named `app` that uses an image named `bw-shot-exercise` built from the Dockerfile in exercise 1.
 - service running an nginx container in front of `app` available at port `8081`
 - `app` is ONLY accessible through the nginx container and not from localhost
 
