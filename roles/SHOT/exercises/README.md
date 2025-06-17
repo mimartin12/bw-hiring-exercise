@@ -15,7 +15,7 @@ important for the success of this role. Use the provided application to build a 
 ### Exercise 1: Acceptance Criteria
 
 - Dockerfile in the root of the `roles/SHOT/` directory
-- Dockerfile users python:3.12.5-slim as the base image
+- Dockerfile uses python:3.12.5-slim as the base image
 - The exposed port on the container is port 8080
 
 ### Exercise 1: Validation
@@ -34,7 +34,7 @@ docker-compose file that has both the image created with the above Dockerfile an
 
 ### Exercise 2: Acceptance Criteria
 
-- docker-compose file in the root of the repo
+- docker-compose file in the `roles/SHOT/` directory
 - service named `app` that uses an image named `bw-shot-exercise` built from the Dockerfile in exercise 1.
 - service running an nginx container in front of `app` available at port `8081`
 - `app` is ONLY accessible through the nginx container and not from localhost
@@ -45,8 +45,8 @@ This role maintains Helm charts for the self-host stack and is responsible for c
 
 Some examples of tools you can use:
 
-- Terraform/Pulumi for a cloud hosted Kubernetes cluster
-- KIND/Minikube for a local Kubernetes cluster
+- [Terraform](https://developer.hashicorp.com/terraform)/[Pulumi](https://www.pulumi.com/) for a cloud hosted Kubernetes cluster
+- [KIND](https://kind.sigs.k8s.io/)/[Minikube](https://minikube.sigs.k8s.io/) for a local Kubernetes cluster
 
 ### Exercise 3: Acceptance Criteria
 
@@ -62,7 +62,7 @@ This role is responsible for maintaining the official Bitwarden Helm Charts. Cre
 - A Helm Chart that has
   + One deployment of the python app; configurable image versions
   + Ingress pointing to the python app; configurable for TLS and custom hostname
-  + A values file that can be used to configure the chart
+  + A values file that can be used to configure the chart, including the custom message return by the app
   + A test file that tests the chart
   + Passed `helm lint`
 
@@ -71,5 +71,5 @@ This role is responsible for maintaining the official Bitwarden Helm Charts. Cre
 ```bash
 helm lint roles/SHOT/kubernetes/helm-chart ## Expected result: Linting passed
 helm install bw-shot-exercise roles/SHOT/kubernetes/helm-chart ## Expected result: Deployment created
-curl -k https://bw-shot-exercise.example.com ## Expected result: {"message": "Hi from Bitwarden!"}
+curl $HOSTNAME/custom ## Expected result: {"message": "hey!"}
 ```
