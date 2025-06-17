@@ -8,45 +8,43 @@ skills. Each one of these skills will be used on a weekly basis, if not a daily 
 
 1. Writing Dockerfiles
 2. Writing docker-compose files
-3. Building pipelines (we use GitHub Actions, so the exercise will also be using GitHub Actions)
-   a. Automating CI/CD
-   b. Application versioning
-4. Extra credit: Write a Helm Chart for the docker-compose file
-
+3. Deploying a Kubernetes cluster
+4. Writing a Helm Chart
 
 **Note:** Feel free to use documentation, articles, and/or videos on the topics here; just like you would do in such a
 position in daily work. This is **NOT** a knowledge test. 
 
-
-### Setup
+### Getting started
 
 Fork this repo and keep it private.
 
 Proceed to the exercises in `/exercises`
 
-
 ---
 
 ## Requirements
+
 - pipenv
 - docker
-
 
 ## Development
 
 ### Setup
-```
+
+```bash
 pipenv install
 pipenv install --dev
 ```
 
 ### Testing
-```
+
+```bash
 pipenv run pytest
 ```
 
 ### Running Api
-```
+
+```bash
 pipenv shell
 uvicorn src.app:app
-
+```
