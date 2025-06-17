@@ -7,7 +7,7 @@ skills. Each one of these skills will be used on a weekly basis, if not a daily 
 **Note:** Feel free to use documentation, articles, and/or videos on the topics here; just like you would do in such a
 position in daily work. This is **NOT** a knowledge test.
 
-## 1. Exercise 1: Dockerfiles
+## 1. Exercise: Dockerfiles
 
 Container images are the building blocks of our self-host stack. Understanding how to create them from scratch is
 important for the success of this role. Use the provided application to build a Dockerfile
@@ -18,7 +18,7 @@ important for the success of this role. Use the provided application to build a 
 - Dockerfile users python:3.12.5-slim as the base image
 - The exposed port on the container is port 8080
 
-### Validation
+### Exercise 1: Validation
 
 ```bash
 docker run -e BW_MESSAGE='hey' -p 8080:8080 $IMAGE_NAME
@@ -27,7 +27,7 @@ curl http://localhost:8080/         ## Expected result: {"message": "Hi from Bit
 curl http://localhost:8080/custom   ## Expected result: {"message": "hey"}
 ```
 
-## 2. Exercise 2: Docker Compose Files
+## 2. Exercise: Docker Compose Files
 
 Our self-host stack uses a docker compose file to orchestrate the Bitwarden containers on the end user's VMs. Build a
 docker-compose file that has both the image created with the above Dockerfile and an nginx container in front of it.
@@ -39,7 +39,7 @@ docker-compose file that has both the image created with the above Dockerfile an
 - service running an nginx container in front of `app` available at port `8081`
 - `app` is ONLY accessible through the nginx container and not from localhost
 
-## 3. Exercise 3: Kubernetes
+## 3. Exercise: Kubernetes
 
 This role maintains Helm charts for the self-host stack and is responsible for creating and testing new features for our charts. Create a Kubernetes cluster that you can use in our next exercise. Choose your tool of choice, if you use a script or IaC, place it into the `roles/SHOT/kubernetes` directory.
 
@@ -53,7 +53,7 @@ Some examples of tools you can use:
 - Kuberentes cluster is running and deployment is reproducible
 - Any IaC files exist in the `roles/SHOT/kubernetes` directory
 
-## 4. Exercise 4: Helm Chart
+## 4. Exercise: Helm Chart
 
 This role is responsible for maintaining the official Bitwarden Helm Charts. Create a Helm chart that deploys the Docker image you built in exercise 1. Place the chart into the `roles/SHOT/kubernetes` directory.
 
