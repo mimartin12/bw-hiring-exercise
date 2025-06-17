@@ -1,4 +1,5 @@
 # BW-Hiring-Exercises
 
-> As of right now, this only includes excercises for Self-host Orchestration & Tooling hiring.
+Roles:
 
+- [Self-host Orchestration & Tooling Engineer](roles/SHOT/README.md)
