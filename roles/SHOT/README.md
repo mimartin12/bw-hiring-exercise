@@ -16,9 +16,11 @@ position in daily work. This is **NOT** a knowledge test.
 
 ### Getting started
 
-Fork this repo and keep it private.
+Fork this repo
 
 Proceed to the exercises in `/exercises`
+
+Once complete, share the link to your forked repo with your recruiter.
 
 ---
 
